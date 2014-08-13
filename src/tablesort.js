@@ -42,6 +42,10 @@
                 }
                 that.current = this;
                 that.sortTable(this);
+                
+                if (typeof options.done == 'function') {
+                    options.done();
+                }
             };
 
             // Assume first row is the header and attach a click handler to each.
